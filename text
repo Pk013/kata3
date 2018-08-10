@@ -1,0 +1,18 @@
+const output = document.getElementById("output")
+
+function createNumberOutput (description, startingNumber, endingNumber, step)
+    const containerElement = document.createElement("p")
+    const descriptionElement = document.createTextNode(h3)
+    descriptionElement.appendChild(document.createTextNode(description))
+    containerElement.appendChild(descriptionElement)
+    for(let count = startingNumber; count <=endingNumber; count +=step){
+        const spanElement = document.createElement(span)
+        let countTextNode
+        if(count === endingNumber){
+            countTextNode = document.createTextNode(count)
+        } else {
+            countTextNode = document.createTextNode(count + ", ")
+        }
+        spanElement.appendChild(countTextNode)
+        containerElement.appendChild(spanElement)
+    }
