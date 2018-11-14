@@ -1,15 +1,286 @@
+<!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Adding content with document.createElement</title>
+    <title>Katas 3</title>
     <style>
-      .bar {background: gray; height: 20px; margin: 10px; color: white;}
+        .bar {
+            background: gray;
+            height: 20px;
+            margin: 10px;
+            color: white;
+        }
     </style>
-  </head>
-  <body>
-    <h1>katas 3</h1>
-      <main id="output"></main>
-      <script src="index.js"></script>
-  </body>
+</head>
+
+<body>
+    <div id="katas"></div>
+
+
+    <script>
+        const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472]
+        let reuseLet = document.getElementById("katas")
+        let numberOneHeading = document.createElement("div")
+        numberOneHeading.innerHTML = "<h3>1. Display the numbers from 1 to 20.</h3>"
+        reuseLet.appendChild(numberOneHeading)
+        let numberOneText = document.createElement("p")
+        for (let counter = 1; counter <= 20; counter++) {
+            numberOneText.innerText += " " + counter
+            reuseLet.appendChild(numberOneText)
+        }
+        let numberTwoHeading = document.createElement("div")
+        numberTwoHeading.innerHTML = "<h3>2. Display the even numbers from 2 to 20.</h3>"
+        reuseLet.appendChild(numberTwoHeading)
+        let numberTwoText = document.createElement("p")
+        for (let b = 2; b <= 20; b += 2) {
+            numberTwoText.innerText += " " + b
+            reuseLet.appendChild(numberTwoText)
+        }
+        let numberThreeHeading = document.createElement("div")
+        numberThreeHeading.innerHTML = "<h3>3. Display the odd numbers from 1 to 19.</h3>"
+        reuseLet.appendChild(numberThreeHeading)
+        let numberThreeText = document.createElement("p")
+        for (let c = 1; c <= 19; c += 2) {
+            numberThreeText.innerText += " " + c
+            reuseLet.appendChild(numberThreeText)
+        }
+        let numberFourHeading = document.createElement("div")
+        numberFourHeading.innerHTML = "<h3>4. Display the numbers from 5 to 100 counting by 5s.</h3>"
+        reuseLet.appendChild(numberFourHeading)
+        let numberFourText = document.createElement("p")
+        for (let d = 5; d <= 100; d += 5) {
+            numberFourText.innerText += " " + d
+            reuseLet.appendChild(numberFourText)
+        }
+        let numberFiveHeading = document.createElement("div")
+        numberFiveHeading.innerHTML = "<h3>5. Display the squares of the numbers from 1 to 10.</h3>"
+        reuseLet.appendChild(numberFiveHeading)
+        let numberFiveText = document.createElement("p")
+        for (let e = 1; e <= 10; e++) {
+            f = e * e
+            numberFiveText.innerText += " " + f
+            reuseLet.appendChild(numberFiveText)
+        }
+        let numberSixHeading = document.createElement("div")
+        numberSixHeading.innerHTML = "<h3>6. Display the numbers from 20 to 1.</h3>"
+        reuseLet.appendChild(numberSixHeading)
+        let numberSixText = document.createElement("p")
+        for (let g = 20; g > 0; g--) {
+            numberSixText.innerText += " " + g
+            reuseLet.appendChild(numberSixText)
+        }
+        let numberSevenHeading = document.createElement("div")
+        numberSevenHeading.innerHTML = "<h3>7. Display the even numbers from 20 to 2.</h3>"
+        reuseLet.appendChild(numberSevenHeading)
+        let numberSevenText = document.createElement("p")
+        for (let h = 20; h > 0; h -= 2) {
+            numberSevenText.innerText += " " + h
+            reuseLet.appendChild(numberSevenText)
+        }
+        let numberEightHeading = document.createElement("div")
+        numberEightHeading.innerHTML = "<h3>8. Display the odd numbers from 19 to 1.</h3>"
+        reuseLet.appendChild(numberEightHeading)
+        let numberEightText = document.createElement("p")
+        for (let i = 19; i > 0; i -= 2) {
+            numberEightText.innerText += " " + i
+            reuseLet.appendChild(numberEightText)
+        }
+        let numberNineHeading = document.createElement("div")
+        numberNineHeading.innerHTML = "<h3>9. Display the numbers from 100 to 5 subtracting by 5.</h3>"
+        reuseLet.appendChild(numberNineHeading)
+        let numberNineText = document.createElement("p")
+        for (let j = 100; j >= 5; j -= 5) {
+            numberNineText.innerText += " " + j
+            reuseLet.appendChild(numberNineText)
+        }
+        let numberTenHeading = document.createElement("div")
+        numberTenHeading.innerHTML = "<h3>10. Display the squares from 20 to 2.</h3>"
+        reuseLet.appendChild(numberTenHeading)
+        let numberTenText = document.createElement("p")
+        for (let k = 10; k >= 1; k--) {
+            l = k * k
+            numberTenText.innerText += " " + l
+            reuseLet.appendChild(numberTenText)
+        }
+        let numberElevenHeading = document.createElement("div")
+        numberElevenHeading.innerHTML = "<h3>11. Display the content of sampleArray.</h3>"
+        reuseLet.appendChild(numberElevenHeading)
+        let numberElevenText = document.createElement("p")
+        for (let counter = 0; counter <= 19; counter++) {
+            let result = sampleArray[counter]
+            numberElevenText.innerText += " " + result
+            reuseLet.appendChild(numberElevenText)
+        }
+        let numberTwelveHeading = document.createElement("div")
+        numberTwelveHeading.innerHTML = "<h3>12. Display just the even numbers of sampleArray.</h3>"
+        reuseLet.appendChild(numberTwelveHeading)
+        let numberTwelveText = document.createElement("p")
+        for (let m = 0; m <= 19; m++) {
+            let n = sampleArray[m]
+        }
+        function even(a) {
+            return a.filter(function (val) { return val % 2 === 0 })
+        }
+        numberTwelveText.innerText += " " + even(sampleArray);
+        reuseLet.appendChild(numberTwelveText)
+        let numberThirteenHeading = document.createElement("div")
+        numberThirteenHeading.innerHTML = "<h3>13. Display just the odd numbers of sampleArray.</h3>"
+        reuseLet.appendChild(numberThirteenHeading)
+        let numberThirteenText = document.createElement("p")
+        for (let o = 0; o <= 20; o++) {
+            let p = sampleArray[o]
+        }
+        function odd(a) {
+            return a.filter(function (val) { return val % 2 === 1 })
+        }
+        numberThirteenText.innerText += " " + odd(sampleArray);
+        reuseLet.appendChild(numberThirteenText)
+        let numberFourteenHeading = document.createElement("div")
+        numberFourteenHeading.innerHTML = "<h3>14. Display the square numbers of sampleArray.</h3>"
+        reuseLet.appendChild(numberFourteenHeading)
+        let numberFourteenText = document.createElement("p")
+        for (let o = 0; o <= 19; o++) {
+            let p = sampleArray[o]
+            p *= p
+            numberFourteenText.innerText += " " + p;
+            reuseLet.appendChild(numberFourteenText)
+        }
+        let numberFifteenHeading = document.createElement("div")
+        numberFifteenHeading.innerHTML = "<h3>15. Display the sum of all the numbers from 1 to 20..</h3>"
+        reuseLet.appendChild(numberFifteenHeading)
+        let numberFifteenText = document.createElement("p")
+        let sum = 0;
+        for (let o = 0; o <= 20; o++) {
+            sum += o;
+        }
+        numberFifteenText.innerText += " " + sum;
+        reuseLet.appendChild(numberFifteenText);
+        let numberSixteenHeading = document.createElement("div")
+        numberSixteenHeading.innerHTML = "<h3>16. Display the sum of all the numbers in sampleArray.</h3>"
+        reuseLet.appendChild(numberSixteenHeading)
+        let numberSixteenText = document.createElement("p")
+        let q = 0
+        for (let o = 0; o <= 19; o++) {
+            q += sampleArray[o]
+        }
+        numberSixteenText.innerText += " " + q;
+        reuseLet.appendChild(numberSixteenText);
+        let numberSeventeenHeading = document.createElement("div")
+        numberSeventeenHeading.innerHTML = "<h3>17. Display the smallest element in sampleArray.</h3>"
+        reuseLet.appendChild(numberSeventeenHeading)
+        let numberSeventeenText = document.createElement("p")
+        let minvalue = sampleArray[0]
+        for (let o = 0; o <= 20; o++) {
+            if (sampleArray[o] < minvalue) {
+                minvalue = sampleArray[o]
+            }
+        }
+        numberSeventeenText.innerText += " " + minvalue;
+        reuseLet.appendChild(numberSeventeenText);
+        let numberEighteenHeading = document.createElement("div")
+        numberEighteenHeading.innerHTML = "<h3>18. Display the largest element in sampleArray.</h3>"
+        reuseLet.appendChild(numberEighteenHeading)
+        let numberEighteenText = document.createElement("p")
+        let maxvalue = sampleArray[0]
+        for (let o = 0; o <= 20; o++) {
+            if (sampleArray[o] > maxvalue) {
+                maxvalue = sampleArray[o]
+            }
+        }
+        numberEighteenText.innerText += " " + maxvalue;
+        reuseLet.appendChild(numberEighteenText);
+        let numberNineteenHeading = document.createElement("div")
+        numberNineteenHeading.innerHTML = "<h3>19. Display 20 solid gray rectangles, each 20px high and 100px wide.</h3>"
+        reuseLet.appendChild(numberNineteenHeading)
+        let numberNineteenText = document.createElement("p")
+        for (i = 1; i <= 20; i++) {
+            var newElement = document.createElement("div");
+            newElement.className = "bar";
+            newElement.style.width = '100px';
+            var destination = document.getElementById("katas");
+            destination.appendChild(newElement);
+        }
+        //numberNineteenText.innerText += " " + newElement;
+        reuseLet.appendChild(numberNineteenText);
+        let numberTwentyHeading = document.createElement("div")
+        numberTwentyHeading.innerHTML = "<h3>20. Display 20 solid gray rectangles, each 20px high, with widths ranging evenly from 105px to 200px (remember #4, above).</h3>"
+        reuseLet.appendChild(numberTwentyHeading)
+        let numberTwentyText = document.createElement("p")
+        for (i = 105; i <= 200; i += 5) {
+            var newElement = document.createElement("div");
+            newElement.className = "bar";
+            newElement.style.width = i + 'px'
+            var destination = document.getElementById("katas");
+            destination.appendChild(newElement);
+        }
+        //numberTwentyText.innerText += " " + newElement;
+        reuseLet.appendChild(numberTwentyText);
+        let numberTwentyoneHeading = document.createElement("div")
+        numberTwentyoneHeading.innerHTML = "<h3>21. Display 20 solid gray rectangles, each 20px high, with widths in pixels given by the 20 elements of sampleArray.</h3>"
+        reuseLet.appendChild(numberTwentyoneHeading)
+        let numberTwentyoneText = document.createElement("p")
+        for (i = 0; i <= 19; i++) {
+            var newElement = document.createElement("div");
+            newElement.className = "bar";
+            newElement.style.width = sampleArray[i] + 'px';
+            var destination = document.getElementById("katas");
+            destination.appendChild(newElement);
+        }
+        //numberTwentyoneText.innerText += " " + newElement;
+        reuseLet.appendChild(numberTwentyoneText);
+        let numberTwentyTwoHeading = document.createElement("div")
+        numberTwentyTwoHeading.innerHTML = "<h3>22. As in #21, but alternate colors so that every other rectangle is red.</h3>"
+        reuseLet.appendChild(numberTwentyTwoHeading)
+        let numberTwentyTwoText = document.createElement("p")
+        for (i = 0; i <= 19; i++) {
+            var destination = document.getElementById("katas");
+            var newElement = document.createElement("div");
+            //newElement.className = "bar";
+            //newElement.style.width = sampleArray[i] + 'px';
+            if (i % 2 == 1) {
+                newElement.className = "bar";
+                newElement.style.background = 'red'
+                newElement.style.width = sampleArray[i] + 'px';
+                destination.appendChild(newElement);
+            }
+            else {
+                newElement.className = "bar";
+                newElement.style.width = sampleArray[i] + 'px';
+                destination.appendChild(newElement);
+            }
+            // var destination = document.getElementById("katas");
+            // destination.appendChild(newElement);
+        }
+        //numberTwentyoneText.innerText += " " + newElement;
+        reuseLet.appendChild(numberTwentyTwoText);
+        let numberTwentythreeHeading = document.createElement("div")
+        numberTwentythreeHeading.innerHTML = "<h3>23. As in #21, but color the rectangles with even widths red.</h3>"
+        reuseLet.appendChild(numberTwentythreeHeading)
+        let numberTwentythreeText = document.createElement("p")
+        for (i = 0; i <= 19; i++) {
+            var destination = document.getElementById("katas");
+            var newElement = document.createElement("div");
+            //newElement.className = "bar";
+            //newElement.style.width = sampleArray[i] + 'px';
+            if (sampleArray[i] % 2 == 0) {
+                newElement.className = "bar";
+                newElement.style.background = 'red'
+                newElement.style.width = sampleArray[i] + 'px';
+                destination.appendChild(newElement);
+            }
+            else {
+                newElement.className = "bar";
+                newElement.style.width = sampleArray[i] + 'px';
+                destination.appendChild(newElement);
+            }
+            // var destination = document.getElementById("katas");
+            // destination.appendChild(newElement);
+        }
+        //numberTwentyoneText.innerText += " " + newElement;
+        reuseLet.appendChild(numberTwentythreeText);
+    </script>
+</body>
+
 </html>
